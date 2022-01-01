@@ -23,7 +23,7 @@ namespace SRTF_Visualizer
         }
 
         /*
-         * Initializes all lists and variables for storing process id and required inputs
+         * Declaring or Initializing all lists and variables for storing process id and required inputs
          */
         List<Process> Process_List = new();
         readonly List<Process> ganttChart = new();
@@ -58,7 +58,7 @@ namespace SRTF_Visualizer
             // check if process list is empty
             if (Process_List.Count == 0)
             {
-                MessageBox.Show("Magpasok ka muna ng data mo bobo!", "SRTF Visualizer: Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Input your data first!", "SRTF Visualizer: Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -113,7 +113,7 @@ namespace SRTF_Visualizer
 
             if (sameProcID)
             {
-                MessageBox.Show("Two process can't have same ID: " + Convert.ToString(Process_ID) + " at a same time.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Two process can't have the same ID: " + Convert.ToString(Process_ID), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 sameProcID = false;
                 return;
             }
@@ -141,14 +141,14 @@ namespace SRTF_Visualizer
          */
         private void Clear_all_btn_Click(object sender, EventArgs e)
         {
-            DialogResult dialog = MessageBox.Show("Do you really want to Remove all Processes?", "SRTF Visualizer: Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            DialogResult dialog = MessageBox.Show("Do you really want to Remove all Process?", "SRTF Visualizer: Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
 
             // Just reset hehe
             if (dialog == DialogResult.Yes)
             {
                 total_turnAround_time = 0;
                 total_waiting_time = 0;
-                X = 0;
+                X = 16;
                 Y = 16;
                 time = 0;
                 Process_Burst = 0;

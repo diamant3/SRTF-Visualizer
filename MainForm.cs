@@ -19,8 +19,7 @@ namespace SRTF_Visualizer
         }
 
         /*
-         *  Open a child form inside the parent form, yung form kung saan tayo nag gagawa ng mga buttons/textbox,
-         *  kumbaga pinaka papel, dun tayo nagdro drawing hehe 
+         *  Open a child form inside the parent form
          */
 
         private void OpenChildForm(Form childForm, object btnSender) // Source: https://www.youtube.com/watch?v=BtOEztT1Qzk&list=PLwG-AtjFaHdMi6wceN1_atblW-B4R-llj&t=891s
