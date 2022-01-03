@@ -19,7 +19,6 @@ namespace SRTF_Visualizer
         public Srtf()
         {
             InitializeComponent();
-
         }
 
         /*
@@ -29,13 +28,11 @@ namespace SRTF_Visualizer
         readonly List<Process> ganttChart = new();
         readonly List<int> Arrival_time = new();
         readonly List<int> burst_time = new();
-        readonly List<int> flag = new();
-        readonly List<int> service_time = new();
         int Process_ID;
         int Process_Arrival;
         int Process_Burst;
         int time = 0;
-        int complete = 0, shortest = 0, finish_time, minimum;
+        int complete = 0, shortest = 0, finish_time = 0, minimum = 0;
         float total_waiting_time = 0f, total_turnAround_time = 0f;
         string[] row = new string[50];
         bool sameProcID = false;
@@ -83,12 +80,12 @@ namespace SRTF_Visualizer
                 recordTable1.Rows.Add(row);
             }
 
-            if ((total_turnAround_time / Process_List.Count) == 0)
+            if ((total_turnAround_time / Process_List.Count) == 0.0)
                tatBox.Text = "0.00";
             else
                 tatBox.Text = (total_turnAround_time / Process_List.Count).ToString("#.##");
 
-            if ((total_waiting_time / Process_List.Count) == 0)
+            if ((total_waiting_time / Process_List.Count) == 0.0)
                 wtBox.Text = "0.00";
             else
                 wtBox.Text = (total_waiting_time / Process_List.Count).ToString("#.##");
@@ -100,6 +97,7 @@ namespace SRTF_Visualizer
         private void Add_btn_Click(object sender, EventArgs e)
         {
             recordTable1.Visible = false;
+            recordTable2.Visible = true;
             Process_ID = Convert.ToInt32(procID_in.Value);
             Process_Burst = Convert.ToInt32(bt_in.Text);
             Process_Arrival = Convert.ToInt32(at_in.Text);
@@ -143,7 +141,7 @@ namespace SRTF_Visualizer
         {
             DialogResult dialog = MessageBox.Show("Do you really want to Remove all Process?", "SRTF Visualizer: Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
 
-            // Just reset hehe
+            // Just reset
             if (dialog == DialogResult.Yes)
             {
                 total_turnAround_time = 0;
@@ -158,39 +156,39 @@ namespace SRTF_Visualizer
                 minimum = 0; 
                 sameProcID = false;
                 Process_List.Clear(); 
-                ganttChart.Clear(); 
-                flag.Clear();
+                ganttChart.Clear();
                 burst_time.Clear(); 
-                Arrival_time.Clear(); 
-                service_time.Clear();
+                Arrival_time.Clear();
+                tatBox.Text = "";
+                wtBox.Text = "";
+                gcPane.Controls.Clear();
                 recordTable1.Rows.Clear();
                 recordTable1.Refresh();
                 recordTable2.Rows.Clear();
                 recordTable2.Refresh();
-                tatBox.Text = wtBox.Text = "";
-                gcPane.Controls.Clear();
             }
         }
 
         /*
          * SRTF Core Function
          */
-        public void SRTFfindavgTime(List<Process> Process_List, int processLength)
+        public void SRTFfindavgTime(List<Process> Process_List, int processCount)
         {
             minimum = int.MaxValue;
 
-            // Copy the burst time into rt[] 
-            for (int process = 0; process < processLength; process++)
+            for (int process = 0; process < processCount; process++)
             {
                 burst_time.Add(Process_List[process].burst_time); // making new burst time list 
             }
             // do until all processes are done
-            while (complete != processLength)
+            while (complete != processCount)
             {
-                // find minimum remaing time process, from process arrived till now
-                for (int procTime = 0; procTime < processLength; procTime++)
+                // find minimum remaining time process, from process arrived till now
+                for (int procTime = 0; procTime < processCount; procTime++)
                 {
-                    if ((Process_List[procTime].arrival_time <= time) && (burst_time[procTime] < minimum) && burst_time[procTime] > 0)
+                    if ((Process_List[procTime].arrival_time <= time) &&
+                        (burst_time[procTime] < minimum) &&
+                        burst_time[procTime] > 0)
                     {
                         minimum = burst_time[procTime];
                         shortest = procTime;
@@ -198,11 +196,12 @@ namespace SRTF_Visualizer
                     }
                 }
 
-                if (sameProcID == false)
+                if (!sameProcID)
                 {
                     time++;
                     continue;
                 }
+
                 ganttChart.Add(Process_List[shortest]);
 
                 // reduce remaining time by one 
@@ -222,7 +221,7 @@ namespace SRTF_Visualizer
                 // Update minimum 
                 minimum = burst_time[shortest];
 
-                // if prcess is done executing
+                // if process is done executing
                 if (burst_time[shortest] == 0)
                 {
                     minimum = int.MaxValue;
@@ -234,7 +233,7 @@ namespace SRTF_Visualizer
                     //finish time in array
                     finish_time = time + 1;
 
-                    // waiting time calculate
+                    // waiting time calculate & turn around time
                     Process_List[shortest].Pwaiting_time = finish_time - Process_List[shortest].burst_time - Process_List[shortest].arrival_time;
                     Process_List[shortest].PturnAround_time = Process_List[shortest].burst_time + Process_List[shortest].Pwaiting_time;
 
@@ -247,7 +246,7 @@ namespace SRTF_Visualizer
 
             PrintGanttChart(ganttChart);
 
-            for (int process = 0; process < processLength; process++)
+            for (int process = 0; process < processCount; process++)
             {
                 total_waiting_time += Process_List[process].Pwaiting_time;
                 total_turnAround_time += Process_List[process].PturnAround_time;
@@ -266,8 +265,7 @@ namespace SRTF_Visualizer
             textBox6.Size = new System.Drawing.Size(gcY, gcX);
             textBox6.BackColor = ganttChart[0].process_color;
             textBox6.Location = new Point(Y, 59);
-            textBox6.Text = 0.ToString();
- 
+            textBox6.Text = 0.ToString();       
 
             for (; num < ganttChart.Count; num++)
             {

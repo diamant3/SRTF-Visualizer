@@ -19,4 +19,4 @@ SRTF visualizer is a C# based program with GUI(Windows Forms) to show the SRTF a
 
 ## Note
 
-This is an experimental and inaccurate, you can improve or use as learning purposes
+This is my final project for my 1st semester in 2nd yr. cs major and if you want, you can improve or use as learning purposes.
