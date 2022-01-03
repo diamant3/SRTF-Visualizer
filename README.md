@@ -1,5 +1,7 @@
 # SRTF-Visualizer
 
+![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white)
+
 SRTF visualizer is a C# based program with GUI(Windows Forms) to show the SRTF algorithm 
 
 ## Demonstration
