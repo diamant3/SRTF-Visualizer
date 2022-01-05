@@ -36,6 +36,7 @@ namespace SRTF_Visualizer
         float total_waiting_time = 0f, total_turnAround_time = 0f;
         string[] row = new string[50];
         bool sameProcID = false;
+        bool solved = false;
 
         /*
          * Gantt Chart drawing boxes - positions x and y
@@ -58,18 +59,20 @@ namespace SRTF_Visualizer
                 MessageBox.Show("Input your data first!", "SRTF Visualizer: Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
-            SRTFfindavgTime(Process_List, Process_List.Count); // core srtf functions
-
-            recordTable2.Visible = false;
-            recordTable1.Visible = true;
-
-            // final output to the table
-            Process_List = Process_List.OrderBy(i => i.P_id).ToList();
-            for (int i = 0; i < Process_List.Count; i++)
+            else if (!solved)
             {
-                row = new[]
+
+                SRTFfindavgTime(Process_List, Process_List.Count); // core srtf functions
+
+                recordTable2.Visible = false;
+                recordTable1.Visible = true;
+
+                // final output to the table
+                Process_List = Process_List.OrderBy(i => i.P_id).ToList();
+                for (int i = 0; i < Process_List.Count; i++)
                 {
+                    row = new[]
+                    {
                     Convert.ToString(Process_List[i].P_id),
                     Convert.ToString(Process_List[i].arrival_time),
                     Convert.ToString(Process_List[i].burst_time),
@@ -77,18 +80,25 @@ namespace SRTF_Visualizer
                     Convert.ToString(Process_List[i].Pwaiting_time)
                 };
 
-                recordTable1.Rows.Add(row);
+                    recordTable1.Rows.Add(row);
+                }
+
+                if ((total_turnAround_time / Process_List.Count) == 0.0)
+                    tatBox.Text = "0.00";
+                else
+                    tatBox.Text = (total_turnAround_time / Process_List.Count).ToString("#.##");
+
+                if ((total_waiting_time / Process_List.Count) == 0.0)
+                    wtBox.Text = "0.00";
+                else
+                    wtBox.Text = (total_waiting_time / Process_List.Count).ToString("#.##");
+
+                solved = true;
             }
-
-            if ((total_turnAround_time / Process_List.Count) == 0.0)
-               tatBox.Text = "0.00";
             else
-                tatBox.Text = (total_turnAround_time / Process_List.Count).ToString("#.##");
-
-            if ((total_waiting_time / Process_List.Count) == 0.0)
-                wtBox.Text = "0.00";
-            else
-                wtBox.Text = (total_waiting_time / Process_List.Count).ToString("#.##");
+            {
+                MessageBox.Show("Already Solved!", "SRTF Visualizer: Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         /*
@@ -96,6 +106,11 @@ namespace SRTF_Visualizer
          */
         private void Add_btn_Click(object sender, EventArgs e)
         {
+            if(solved)
+            {
+                MessageBox.Show("Can't add another process because already Solved!", "SRTF Visualizer: Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             recordTable1.Visible = false;
             recordTable2.Visible = true;
             Process_ID = Convert.ToInt32(procID_in.Value);
@@ -115,7 +130,7 @@ namespace SRTF_Visualizer
                 sameProcID = false;
                 return;
             }
-            else
+            else if (!solved)
             {
                 // Insert the input data to table
                 Process_List.Add(new Process(Process_ID, Process_Burst, Process_Arrival));
@@ -128,12 +143,11 @@ namespace SRTF_Visualizer
                     "   --",
                     "   --"
                 };
+
+                recordTable2.Rows.Add(row);
+                sameProcID = false;
             }
-
-            recordTable2.Rows.Add(row);
-            sameProcID = false;
         }
-
         /*
          *  Clear All Button
          */
@@ -155,6 +169,7 @@ namespace SRTF_Visualizer
                 finish_time = 0; 
                 minimum = 0; 
                 sameProcID = false;
+                solved = false;
                 Process_List.Clear(); 
                 ganttChart.Clear();
                 burst_time.Clear(); 
