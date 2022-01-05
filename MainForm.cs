@@ -13,6 +13,7 @@ namespace SRTF_Visualizer
     public partial class MainForm : Form
     {
         private Form activeForm;
+        private bool srtfClicked = false;
         public MainForm()
         {
             InitializeComponent();
@@ -55,6 +56,12 @@ namespace SRTF_Visualizer
         private void SRTF_btn_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Srtf(), sender);
+            srtfClicked = true;
+            if(srtfClicked)
+            {
+                SRTF_btn.Enabled = false;
+                SRTF_btn.BackColor = Color.FromArgb(120,120,120);
+            }
         }
 
         /*
