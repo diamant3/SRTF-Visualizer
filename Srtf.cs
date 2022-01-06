@@ -140,7 +140,6 @@ namespace SRTF_Visualizer
                     Convert.ToString(Process_List[^1].arrival_time),
                     Convert.ToString(Process_List[^1].burst_time),
                     "   --",
-                    "   --",
                     "   --"
                 };
 

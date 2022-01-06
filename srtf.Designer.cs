@@ -38,7 +38,17 @@ namespace SRTF_Visualizer
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Srtf));
             this.panel1 = new System.Windows.Forms.Panel();
             this.recordTable2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.recordTable1 = new System.Windows.Forms.DataGridView();
+            this.processID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.atValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tatValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wtValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chartBox = new System.Windows.Forms.GroupBox();
             this.gcPane = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -58,16 +68,6 @@ namespace SRTF_Visualizer
             this.label7 = new System.Windows.Forms.Label();
             this.wtBox = new System.Windows.Forms.TextBox();
             this.tatBox = new System.Windows.Forms.TextBox();
-            this.processID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.atValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tatValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.wtValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.recordTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.recordTable1)).BeginInit();
@@ -123,7 +123,7 @@ namespace SRTF_Visualizer
             this.recordTable2.DefaultCellStyle = dataGridViewCellStyle2;
             this.recordTable2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.recordTable2.GridColor = System.Drawing.Color.Gray;
-            this.recordTable2.Location = new System.Drawing.Point(12, 96);
+            this.recordTable2.Location = new System.Drawing.Point(15, 96);
             this.recordTable2.Name = "recordTable2";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -139,6 +139,36 @@ namespace SRTF_Visualizer
             this.recordTable2.Size = new System.Drawing.Size(801, 398);
             this.recordTable2.TabIndex = 15;
             this.recordTable2.TabStop = false;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Process ID";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Arrival Time(ms)";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Burst Time(ms)";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Turn Around Time(ms)";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Waiting Time(ms)";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 8;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
             // recordTable1
             // 
@@ -188,6 +218,36 @@ namespace SRTF_Visualizer
             this.recordTable1.Size = new System.Drawing.Size(801, 398);
             this.recordTable1.TabIndex = 0;
             this.recordTable1.TabStop = false;
+            // 
+            // processID
+            // 
+            this.processID.HeaderText = "Process ID";
+            this.processID.MinimumWidth = 8;
+            this.processID.Name = "processID";
+            // 
+            // atValue
+            // 
+            this.atValue.HeaderText = "Arrival Time(ms)";
+            this.atValue.MinimumWidth = 8;
+            this.atValue.Name = "atValue";
+            // 
+            // btValue
+            // 
+            this.btValue.HeaderText = "Burst Time(ms)";
+            this.btValue.MinimumWidth = 8;
+            this.btValue.Name = "btValue";
+            // 
+            // tatValue
+            // 
+            this.tatValue.HeaderText = "Turn Around Time(ms)";
+            this.tatValue.MinimumWidth = 8;
+            this.tatValue.Name = "tatValue";
+            // 
+            // wtValue
+            // 
+            this.wtValue.HeaderText = "Waiting Time(ms)";
+            this.wtValue.MinimumWidth = 8;
+            this.wtValue.Name = "wtValue";
             // 
             // chartBox
             // 
@@ -373,6 +433,7 @@ namespace SRTF_Visualizer
             // 
             this.wtBox.Location = new System.Drawing.Point(252, 104);
             this.wtBox.Name = "wtBox";
+            this.wtBox.ReadOnly = true;
             this.wtBox.Size = new System.Drawing.Size(150, 34);
             this.wtBox.TabIndex = 1;
             // 
@@ -380,68 +441,9 @@ namespace SRTF_Visualizer
             // 
             this.tatBox.Location = new System.Drawing.Point(252, 41);
             this.tatBox.Name = "tatBox";
+            this.tatBox.ReadOnly = true;
             this.tatBox.Size = new System.Drawing.Size(150, 34);
             this.tatBox.TabIndex = 0;
-            // 
-            // processID
-            // 
-            this.processID.HeaderText = "Process ID";
-            this.processID.MinimumWidth = 8;
-            this.processID.Name = "processID";
-            // 
-            // atValue
-            // 
-            this.atValue.HeaderText = "Arrival Time(ms)";
-            this.atValue.MinimumWidth = 8;
-            this.atValue.Name = "atValue";
-            // 
-            // btValue
-            // 
-            this.btValue.HeaderText = "Burst Time(ms)";
-            this.btValue.MinimumWidth = 8;
-            this.btValue.Name = "btValue";
-            // 
-            // tatValue
-            // 
-            this.tatValue.HeaderText = "Turn Around Time(ms)";
-            this.tatValue.MinimumWidth = 8;
-            this.tatValue.Name = "tatValue";
-            // 
-            // wtValue
-            // 
-            this.wtValue.HeaderText = "Waiting Time(ms)";
-            this.wtValue.MinimumWidth = 8;
-            this.wtValue.Name = "wtValue";
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Process ID";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Arrival Time(ms)";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Burst Time(ms)";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Turn Around Time(ms)";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Waiting Time(ms)";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
             // Srtf
             // 

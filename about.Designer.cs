@@ -65,11 +65,11 @@ namespace SRTF_Visualizer
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Fira Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(237, 273);
+            this.label3.Location = new System.Drawing.Point(129, 257);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(157, 38);
+            this.label3.Size = new System.Drawing.Size(353, 38);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Developers";
+            this.label3.Text = "Developers and Designers";
             // 
             // label4
             // 
@@ -123,14 +123,15 @@ namespace SRTF_Visualizer
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(117, 111);
+            this.label9.Location = new System.Drawing.Point(129, 126);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(415, 133);
+            this.label9.Size = new System.Drawing.Size(364, 98);
             this.label9.TabIndex = 8;
-            this.label9.Text = "SRTF visualizer is a C# program using the WinForm GUI to show the computation in " +
-    "realtime and readable output. ";
+            this.label9.Text = "GUI based \"Shortest Remaining Time First\" (SRTF) scheduling algorithm implementat" +
+    "ion ";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // about
+            // About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -151,7 +152,7 @@ namespace SRTF_Visualizer
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "about";
+            this.Name = "About";
             this.Text = " About";
             this.TopMost = true;
             this.ResumeLayout(false);
