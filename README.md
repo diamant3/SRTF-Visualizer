@@ -18,7 +18,10 @@ SRTF visualizer is a C# based program with GUI(Windows Forms) to show the SRTF a
 - SRTF function Core: https://github.com/Zain-Bin-Arshad/OS-Scheduling
 - UI Inspired from https://github.com/RJCodeAdvance
 
-
 ## Note
+
+Remark of the professors:
+- idle time missing
+- turnaround confusion and missing completion column
 
 This is my final project for my 2nd yr 1st semester in CS and if you want, you can improve or use as learning purposes.
