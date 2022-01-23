@@ -6,7 +6,7 @@ SRTF visualizer is a C# based program with GUI(Windows Forms) to show the SRTF a
 
 ## Demonstration
 
-![Sample Image](sample.png)
+![Sample Image](res/sample.png)
 
 ## Features
 
@@ -21,7 +21,9 @@ SRTF visualizer is a C# based program with GUI(Windows Forms) to show the SRTF a
 ## Note
 
 Remark of the professors:
-- idle time missing
-- turnaround confusion and missing completion column
 
-This is my final project for my 2nd yr 1st semester in CS and if you want, you can improve or use as learning purposes.
+- idle time missing
+- turnaround confusion and missing completion column in record table
+- inaccurate ganttchart end time
+
+This is my final project 1st sem of 2nd year in CS and if you want, you can improve or use as learning purposes.
