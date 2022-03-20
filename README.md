@@ -4,19 +4,24 @@
 
 SRTF visualizer is a C# based program with GUI(Windows Forms) to show the SRTF algorithm 
 
-## Demonstration
+## Sample
 
 ![Sample Image](res/sample.png)
 
 ## Features
 
-- Simple UI and Dark Mode
+- Simple UI
+- Dark Mode
 - With Gantt Chart
+
+## Run
+
+Open `SRTF Visualizer.sln` using [Visual Studio](https://visualstudio.microsoft.com/downloads/), 2019 or the latest community edition.
 
 ## Credits
 
-- SRTF function Core: https://github.com/Zain-Bin-Arshad/OS-Scheduling
-- UI Inspired from https://github.com/RJCodeAdvance
+- SRTF algorithm from [Zain-Bin-Arshad](https://github.com/Zain-Bin-Arshad/OS-Scheduling).
+- UI inspired from [RJCodeAdvance](https://github.com/RJCodeAdvance).
 
 ## Note
 
@@ -26,4 +31,4 @@ Remark of the professors:
 - turnaround confusion and missing completion column in record table
 - inaccurate ganttchart end time
 
-This is my final project 1st sem of 2nd year in CS and if you want, you can improve or use as learning purposes.
+*This is a school project and feel free to improve or learn from it.*
