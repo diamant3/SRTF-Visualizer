@@ -100,7 +100,7 @@ namespace SRTF_Visualizer
             this.recordTable2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Fira Code Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
@@ -115,7 +115,7 @@ namespace SRTF_Visualizer
             this.dataGridViewTextBoxColumn5});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Fira Code Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
@@ -127,7 +127,7 @@ namespace SRTF_Visualizer
             this.recordTable2.Name = "recordTable2";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Fira Code Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
@@ -179,7 +179,7 @@ namespace SRTF_Visualizer
             this.recordTable1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Fira Code Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
@@ -194,7 +194,7 @@ namespace SRTF_Visualizer
             this.wtValue});
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Fira Code Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
@@ -206,7 +206,7 @@ namespace SRTF_Visualizer
             this.recordTable1.Name = "recordTable1";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Fira Code Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
@@ -265,28 +265,28 @@ namespace SRTF_Visualizer
             this.gcPane.AutoScroll = true;
             this.gcPane.AutoSize = true;
             this.gcPane.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcPane.Location = new System.Drawing.Point(3, 30);
+            this.gcPane.Location = new System.Drawing.Point(3, 26);
             this.gcPane.Name = "gcPane";
-            this.gcPane.Size = new System.Drawing.Size(795, 128);
+            this.gcPane.Size = new System.Drawing.Size(795, 132);
             this.gcPane.TabIndex = 0;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Font = new System.Drawing.Font("Fira Code Medium", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(291, 22);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(290, 22);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(236, 47);
+            this.label5.Size = new System.Drawing.Size(259, 36);
             this.label5.TabIndex = 13;
-            this.label5.Text = "Record Table";
+            this.label5.Text = "RECORD TABLE";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 96);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 32);
+            this.label1.Size = new System.Drawing.Size(124, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Process ID:";
             // 
@@ -295,7 +295,7 @@ namespace SRTF_Visualizer
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 170);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(170, 32);
+            this.label2.Size = new System.Drawing.Size(135, 25);
             this.label2.TabIndex = 4;
             this.label2.Text = "Arrival Time:";
             // 
@@ -304,7 +304,7 @@ namespace SRTF_Visualizer
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(12, 244);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(146, 32);
+            this.label3.Size = new System.Drawing.Size(123, 25);
             this.label3.TabIndex = 5;
             this.label3.Text = "Burst Time:";
             // 
@@ -351,15 +351,18 @@ namespace SRTF_Visualizer
             // 
             this.label4.AutoSize = true;
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Fira Code Medium", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(147, 22);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(153, 22);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 47);
+            this.label4.Size = new System.Drawing.Size(110, 36);
             this.label4.TabIndex = 12;
-            this.label4.Text = "Input";
+            this.label4.Text = "INPUT";
             // 
             // procID_in
             // 
+            this.procID_in.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.procID_in.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.procID_in.ForeColor = System.Drawing.Color.White;
             this.procID_in.Location = new System.Drawing.Point(240, 96);
             this.procID_in.Minimum = new decimal(new int[] {
             1,
@@ -367,7 +370,7 @@ namespace SRTF_Visualizer
             0,
             0});
             this.procID_in.Name = "procID_in";
-            this.procID_in.Size = new System.Drawing.Size(180, 34);
+            this.procID_in.Size = new System.Drawing.Size(180, 30);
             this.procID_in.TabIndex = 13;
             this.procID_in.Value = new decimal(new int[] {
             1,
@@ -377,16 +380,20 @@ namespace SRTF_Visualizer
             // 
             // at_in
             // 
+            this.at_in.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.at_in.ForeColor = System.Drawing.Color.White;
             this.at_in.Location = new System.Drawing.Point(240, 168);
             this.at_in.Name = "at_in";
-            this.at_in.Size = new System.Drawing.Size(180, 34);
+            this.at_in.Size = new System.Drawing.Size(180, 30);
             this.at_in.TabIndex = 14;
             // 
             // bt_in
             // 
+            this.bt_in.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.bt_in.ForeColor = System.Drawing.Color.White;
             this.bt_in.Location = new System.Drawing.Point(240, 242);
             this.bt_in.Name = "bt_in";
-            this.bt_in.Size = new System.Drawing.Size(180, 34);
+            this.bt_in.Size = new System.Drawing.Size(180, 30);
             this.bt_in.TabIndex = 15;
             // 
             // label6
@@ -394,7 +401,7 @@ namespace SRTF_Visualizer
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(12, 462);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 32);
+            this.label6.Size = new System.Drawing.Size(0, 25);
             this.label6.TabIndex = 18;
             // 
             // groupBox1
@@ -404,7 +411,7 @@ namespace SRTF_Visualizer
             this.groupBox1.Controls.Add(this.wtBox);
             this.groupBox1.Controls.Add(this.tatBox);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(12, 418);
+            this.groupBox1.Location = new System.Drawing.Point(12, 501);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(408, 159);
             this.groupBox1.TabIndex = 19;
@@ -416,7 +423,7 @@ namespace SRTF_Visualizer
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(6, 107);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(158, 32);
+            this.label8.Size = new System.Drawing.Size(139, 25);
             this.label8.TabIndex = 3;
             this.label8.Text = "Waiting Time";
             // 
@@ -425,7 +432,7 @@ namespace SRTF_Visualizer
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(6, 44);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(206, 32);
+            this.label7.Size = new System.Drawing.Size(187, 25);
             this.label7.TabIndex = 2;
             this.label7.Text = "Turn Around Time";
             // 
@@ -434,7 +441,7 @@ namespace SRTF_Visualizer
             this.wtBox.Location = new System.Drawing.Point(252, 104);
             this.wtBox.Name = "wtBox";
             this.wtBox.ReadOnly = true;
-            this.wtBox.Size = new System.Drawing.Size(150, 34);
+            this.wtBox.Size = new System.Drawing.Size(150, 30);
             this.wtBox.TabIndex = 1;
             // 
             // tatBox
@@ -442,12 +449,12 @@ namespace SRTF_Visualizer
             this.tatBox.Location = new System.Drawing.Point(252, 41);
             this.tatBox.Name = "tatBox";
             this.tatBox.ReadOnly = true;
-            this.tatBox.Size = new System.Drawing.Size(150, 34);
+            this.tatBox.Size = new System.Drawing.Size(150, 30);
             this.tatBox.TabIndex = 0;
             // 
             // Srtf
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 32F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(1258, 672);
@@ -464,13 +471,13 @@ namespace SRTF_Visualizer
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Fira Code Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Srtf";
-            this.Text = "SRTF Scheduling";
+            this.Text = "SRTF Visualizer";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.recordTable2)).EndInit();

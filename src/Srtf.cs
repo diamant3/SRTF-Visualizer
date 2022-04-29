@@ -213,7 +213,6 @@ namespace SRTF_Visualizer
                 if (!sameProcID)
                 {
                     time++;
-                    continue;
                 }
 
                 ganttChart.Add(Process_List[shortest]);
