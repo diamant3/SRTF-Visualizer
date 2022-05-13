@@ -1,10 +1,8 @@
 # SRTF-Visualizer
 
+A C# based program with GUI(Windows Forms) to show the SRTF scheduling algorithm.
+
 ![Badge](https://img.shields.io/badge/Language-csharp-green?style=for-the-badge)
-
-## Introduction
-
-SRTF visualizer is a C# based program with GUI(Windows Forms) to show the SRTF algorithm 
 
 ## GUI Design
 
